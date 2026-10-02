@@ -1,11 +1,8 @@
 import { Text, View, StyleSheet } from "react-native";
+import FoodOptionsScreen from "../screens/FoodOptionsScreen";
 
 export default function Index() {
-  return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  return <FoodOptionsScreen />;
 }
 
 const styles = StyleSheet.create({
