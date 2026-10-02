@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import { foodOptions } from "@/types/foodOptions";
+import { foodOptions } from "@/data/foodOptions";
 import { getIngredientName } from "@/types/ingredients";
 
 export default function FoodOptionsScreen() {

@@ -62,7 +62,7 @@ export const foodOptions: FoodOption[] = [
     requiresRecipe: false,
   },
   {
-    id: "bacon-egg-sandwich",
+    id: "bacon-egg-on-toast",
     name: "Bacon and egg on toast",
     ingredientIds: ["bacon", "eggs", "bread"],
     effort: "medium",

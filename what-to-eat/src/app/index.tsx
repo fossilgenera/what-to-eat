@@ -1,8 +1,9 @@
 import { Text, View, StyleSheet } from "react-native";
 import FoodOptionsScreen from "../screens/FoodOptionsScreen";
+import QuestionScreen from "@/screens/QuestionScreen";
 
 export default function Index() {
-  return <FoodOptionsScreen />;
+  return <QuestionScreen />;
 }
 
 const styles = StyleSheet.create({
