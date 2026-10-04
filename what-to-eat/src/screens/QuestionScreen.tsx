@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { questions } from "../data/questions";
 import { Selection } from "../types/selection";
+import { useRouter, Href } from "expo-router";
 
 export default function QuestionScreen() {
+  const router = useRouter();
   const [stepIndex, setStepIndex] = useState(0);
   const [selection, setSelection] = useState<Selection>({});
 
@@ -11,7 +13,7 @@ export default function QuestionScreen() {
   const isLastQuestion = stepIndex === questions.length - 1;
 
   function finish(finalSelection: Selection) {
-    console.log(finalSelection);
+    // router.push({ pathname: '/suggestions', params: finalSelection } as Href);
   }
 
   function goNext(updated: Selection) {
