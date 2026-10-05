@@ -1,8 +1,8 @@
+import { Href, useRouter } from "expo-router";
 import { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { questions } from "../data/questions";
 import { Selection } from "../types/selection";
-import { useRouter, Href } from "expo-router";
 
 export default function QuestionScreen() {
   const router = useRouter();
@@ -13,7 +13,7 @@ export default function QuestionScreen() {
   const isLastQuestion = stepIndex === questions.length - 1;
 
   function finish(finalSelection: Selection) {
-    // router.push({ pathname: '/suggestions', params: finalSelection } as Href);
+    router.push({ pathname: "/suggestions", params: finalSelection } as Href);
   }
 
   function goNext(updated: Selection) {
@@ -50,6 +50,12 @@ export default function QuestionScreen() {
       </Pressable>
       <Pressable style={styles.secondary} onPress={() => finish(selection)}>
         <Text style={styles.secondaryText}>Show options now</Text>
+      </Pressable>
+      <Pressable
+        style={styles.secondary}
+        onPress={() => router.push("/inventory" as Href)}
+      >
+        <Text style={styles.secondaryText}>My ingredients</Text>
       </Pressable>
     </View>
   );
